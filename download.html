@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Download - Kipas Private Server</title>
+    <link rel="icon" type="image/png" href="image.png" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        midnight: '#0f172a',
+                        panel: '#1e293b',
+                        border: '#334155',
+                        accent: '#6366f1',
+                        accentHover: '#4f46e5'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts via Cloudflare (Nunito Sans & Poppins) -->
+    <link rel="preconnect" href="https://fonts.bunny.net" />
+    <link href="https://fonts.bunny.net/css?family=nunito-sans:900|poppins:400,500,600,700,800" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <style>
+        body {
+            font-family: 'Poppins', system-ui, sans-serif;
+            background-color: #0f172a;
+            color: white;
+            overflow-x: hidden;
+        }
+        #page-content { display: none; }
+        .active-btn {
+            background-color: #6366f1 !important;
+            color: white !important;
+        }
+        .device-btn {
+            transition: all 0.3s ease;
+        }
+        .device-btn:hover {
+            background-color: #4f46e5 !important;
+            color: white !important;
+        }
+        .download-btn {
+            background-color: #6366f1;
+            transition: all 0.3s ease;
+        }
+        .download-btn:hover {
+            background-color: #4f46e5;
+        }
+        .border-panel { border-color: #334155; }
+        .text-accent { color: #6366f1; }
+
+        @keyframes slideArrow {
+            0%, 100% { transform: translateX(0); }
+            50%      { transform: translateX(8px); }
+        }
+        .arrow-animate {
+            display: inline-block;
+            animation: slideArrow 1.8s infinite ease-in-out;
+        }
+
+        @keyframes floatGlow {
+            0%, 100% {
+                transform: translateY(0) scale(1);
+                filter: drop-shadow(0 0 20px rgba(99,102,241,0));
+            }
+            50% {
+                transform: translateY(-12px) scale(1.04);
+                filter: drop-shadow(0 0 35px rgba(99,102,241,0.5));
+            }
+        }
+        .floating-glow {
+            animation: floatGlow 5s ease-in-out infinite;
+            max-width: 100%;
+            height: auto;
+            border-radius: 1.5rem;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-midnight">
+
+    <noscript>
+        <div class="fixed inset-0 bg-midnight flex items-center justify-center text-center p-6 z-50">
+            <div>
+                <h1 class="text-4xl font-bold text-accent mb-6">JavaScript Diperlukan</h1>
+                <p class="text-xl text-gray-300">Aktifkan JavaScript di browser Anda untuk mengakses halaman ini.</p>
+            </div>
+        </div>
+    </noscript>
+
+    <div id="page-content">
+
+        <main>
+            <section id="download" class="py-16 md:py-24">
+                <div class="container mx-auto px-5 md:px-8 max-w-6xl">
+
+                    <!-- Header -->
+                    <div class="text-center mb-12" data-aos="fade-up">
+                        <h1 class="text-4xl md:text-5xl font-bold mb-3">
+                            Download <span class="text-accent">KPS</span>
+                        </h1>
+                        <p class="text-xl md:text-2xl font-semibold text-gray-300 mb-6">
+                            Ayo main dan Jedag-Jedug!
+                        </p>
+                        <a href="https://www.raden.pw/" class="text-accent hover:text-accentHover text-lg font-medium inline-flex items-center gap-2 transition">
+                            <i class="fa fa-home"></i>
+                            Kembali ke Beranda
+                            <span class="arrow-animate text-2xl">→</span>
+                        </a>
+                    </div>
+
+                    <!-- Platform Tabs -->
+                    <div class="flex flex-wrap justify-center gap-4 mb-12" data-aos="fade-up" data-aos-delay="100">
+                        <button data-target="android-content" class="device-btn bg-gray-700 font-bold py-3 px-10 rounded-xl text-lg flex items-center gap-3 active-btn shadow-md">
+                            <i class="fa-brands fa-android text-xl"></i> Android
+                        </button>
+                        <button data-target="ios-content" class="device-btn bg-gray-700 font-bold py-3 px-10 rounded-xl text-lg flex items-center gap-3 shadow-md">
+                            <i class="fa-brands fa-apple text-xl"></i> iOS
+                        </button>
+                    </div>
+
+                    <!-- Content Wrapper -->
+                    <div class="space-y-20">
+
+                        <!-- === Android Section === -->
+                        <div id="android-content" class="download-content" data-aos="fade-up">
+                            <img src="banner.png" alt="KPS Android Banner" class="floating-glow mx-auto block mb-10" />
+
+                            <div class="bg-panel p-6 md:p-10 rounded-2xl shadow-xl border border-panel">
+                                <h2 class="text-3xl font-bold mb-8 flex items-center gap-4">
+                                    <i class="fa-brands fa-android text-accent text-4xl"></i>
+                                    Android
+                                </h2>
+
+                                <div class="grid md:grid-cols-2 gap-10">
+                                    <!-- Files -->
+                                    <div>
+                                        <h3 class="text-2xl font-semibold mb-5 text-accent">File yang Dibutuhkan</h3>
+                                        <div class="space-y-4">
+                                            <a href="https://sfl.gl/uemBRv" target="_blank" class="download-btn text-white font-bold py-4 px-6 rounded-xl text-center flex items-center justify-center gap-3 shadow-lg hover:shadow-indigo-500/30">
+                                                <i class="fa-solid fa-file-apk text-xl"></i>
+                                                GAPERLU OBB LAGI (UDAH FIX EROR)
+                                            </a>
+                                            <a href="https://sfl.gl/P8Sq8C9" target="_blank" class="download-btn text-white font-bold py-4 px-6 rounded-xl text-center flex items-center justify-center gap-3 shadow-lg hover:shadow-indigo-500/30">
+                                                <i class="fa-solid fa-file-code text-xl"></i>
+                                                JSON CONFIG (BUAT YANG EROR LAYAR HITAM)
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Panduan -->
+                                    <div>
+                                        <h3 class="text-2xl font-semibold mb-5 text-accent">Panduan Instalasi</h3>
+                                        <ol class="list-decimal list-inside space-y-3 text-gray-300 text-lg">
+                                            <li>Ikuti <strong>tutorial</strong> yang sudah disediakan (sangat gampang).</li>
+                                            <li>Setelah install, langsung login dan main!</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- === iOS Section === -->
+                        <div id="ios-content" class="download-content hidden" data-aos="fade-up">
+                            <img src="banner.png" alt="KPS iOS Banner" class="floating-glow mx-auto block mb-10" />
+
+                            <div class="bg-panel p-6 md:p-10 rounded-2xl shadow-xl border border-panel">
+                                <h2 class="text-3xl font-bold mb-8 flex items-center gap-4">
+                                    <i class="fa-brands fa-apple text-accent text-4xl"></i>
+                                    iOS
+                                </h2>
+
+                                <div class="grid md:grid-cols-2 gap-10">
+                                    <!-- Files -->
+                                    <div>
+                                        <h3 class="text-2xl font-semibold mb-5 text-accent">File yang Dibutuhkan</h3>
+                                        <div class="space-y-4">
+                                            <a href="https://apps.apple.com/id/app/proxypin-open-source-capture/id6450932949" target="_blank" rel="noopener noreferrer" class="bg-gray-200 hover:bg-gray-300 text-black font-bold py-4 px-6 rounded-xl text-center flex items-center justify-center gap-3 shadow-lg">
+                                                <i class="fa-brands fa-app-store-ios text-xl"></i>
+                                                Get Proxypin (App Store)
+                                            </a>
+                                            <a href="https://www.youtube.com/shorts/BTRVjTczKIM" target="_blank" class="download-btn text-white font-bold py-4 px-6 rounded-xl text-center flex items-center justify-center gap-3 shadow-lg hover:shadow-indigo-500/30">
+                                                <i class="fa-brands fa-youtube text-xl"></i>
+                                                Tutorial Video
+                                            </a>
+                                            <a href="https://sfl.gl/CniHX" target="_blank" class="download-btn text-white font-bold py-4 px-6 rounded-xl text-center flex items-center justify-center gap-3 shadow-lg hover:shadow-indigo-500/30">
+                                                <i class="fa-solid fa-file-code text-xl"></i>
+                                                Download Config
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Panduan -->
+                                    <div>
+                                        <h3 class="text-2xl font-semibold mb-5 text-accent">Panduan Instalasi</h3>
+                                        <ol class="list-decimal list-inside space-y-3 text-gray-300 text-lg">
+                                            <li>Ikuti <strong>tutorial video</strong> di atas (sangat mudah).</li>
+                                            <li>Setelah selesai, tinggal login dan langsung main!</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="bg-midnight border-t border-accent/20 py-10">
+            <div class="container mx-auto px-6 text-center text-gray-400">
+                <div class="mb-6">
+                    <a href="https://dsc.gg/sikipas" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-accent text-4xl transition">
+                        <i class="fa-brands fa-discord"></i>
+                    </a>
+                </div>
+                <p class="text-lg">Kipas Private Server © 2026. All rights reserved.</p>
+                <p class="text-sm mt-2 opacity-80">
+                    Ini adalah private server dan tidak berafiliasi dengan developer resmi.
+                </p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Audio Click -->
+    <audio id="click-sound" src="https://dl.dir.freefiremobile.com/common/web_event/magicarrow/audios/FF_SFX_WebEvent_UI_Click.mp3" preload="auto"></audio>
+
+    <script>
+        document.getElementById('page-content').style.display = 'block';
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 700, once: true });
+    </script>
+
+    <script>
+        const clickSound = document.getElementById('click-sound');
+        const playSound = () => {
+            clickSound.currentTime = 0;
+            clickSound.play().catch(() => {});
+        };
+
+        document.querySelectorAll('a, button').forEach(el => {
+            el.addEventListener('click', playSound);
+        });
+
+        const deviceButtons = document.querySelectorAll('.device-btn');
+        const contentDivs = document.querySelectorAll('.download-content');
+
+        deviceButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                deviceButtons.forEach(btn => btn.classList.remove('active-btn'));
+                button.classList.add('active-btn');
+
+                contentDivs.forEach(div => div.classList.add('hidden'));
+                const target = document.getElementById(button.dataset.target);
+                if (target) target.classList.remove('hidden');
+
+                AOS.refresh();
+            });
+        });
+    </script>
+
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9cdc54500efbe74e',t:'MTc3MTA2OTYzMg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+  </html>
